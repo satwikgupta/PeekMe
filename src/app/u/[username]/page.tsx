@@ -10,7 +10,7 @@ import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function page() {
+export default function MessagePage() {
   const param = useParams<{ username: string }>();
   const username = param.username;
 

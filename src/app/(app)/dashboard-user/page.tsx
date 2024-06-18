@@ -35,7 +35,6 @@ export default function Dashboard() {
       resolver: zodResolver(acceptMessageSchema),
     });
 
-
   const { register, watch, setValue } = form;
 
   const acceptMessages = watch("acceptMessages");
@@ -57,7 +56,7 @@ export default function Dashboard() {
     } finally {
       setIsSwitchLoading(false);
     }
-  }, [setValue]);
+  }, [setValue, toast]);
 
   const fetchMessages = useCallback(
     async (refresh: boolean) => {
@@ -86,7 +85,7 @@ export default function Dashboard() {
         setIsSwitchLoading(false);
       }
     },
-    [setIsLoading, setMessages]
+    [setIsLoading, setMessages, toast]
   );
 
   useEffect(() => {

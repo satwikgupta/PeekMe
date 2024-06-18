@@ -21,7 +21,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 
-export default function page() {
+export default function SignInPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const router = useRouter();
@@ -113,7 +113,7 @@ export default function page() {
         </Form>
         <div className="text-center mt-4">
           <p>
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href="/sign-up" className="text-blue-500 hover:text-blue-800">
               Sign up
             </Link>
