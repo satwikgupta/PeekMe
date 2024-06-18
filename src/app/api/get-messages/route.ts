@@ -43,13 +43,14 @@ export async function GET(req: Request) {
         },
       },
     ]);
+    // console.log(user);
     if (!user || user.length === 0) {
       return Response.json(
         {
           success: false,
-          message: "Failed to find user",
+          message: "No messages yet!",
         },
-        { status: 500 }
+        { status: 404 }
       );
     } else {
       return Response.json(
